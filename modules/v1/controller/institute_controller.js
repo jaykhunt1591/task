@@ -12,7 +12,7 @@ exports.add_institute = async (req, res) => {
         standard: "required_if:organization_type,School",
         subjects: "required_if:organization_type,School",
         university: "required_if:organization_type,College",
-        degree_type: "required_if:organization_type,College"
+        degree: "required_if:organization_type,College"
     }
 
     let valid = await common.checkValidationRules(request, rules);
